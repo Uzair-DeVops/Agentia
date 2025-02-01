@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #6366f1, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-800/80 backdrop-blur-md z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold gradient-text">Agentia</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-purple-400 transition-all">Home</a>
+                <a href="#about" class="hover:text-purple-400 transition-all">About</a> <!-- Added About link -->
+                <a href="#services" class="hover:text-purple-400 transition-all">Services</a>
+                <a href="#projects" class="hover:text-purple-400 transition-all">Projects</a>
+                <a href="#contact" class="hover:text-purple-400 transition-all">Contact</a>
+            </div>
+            <button id="menuBtn" class="md:hidden">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden fixed w-full bg-gray-900 top-16 hidden">
+        <div class="flex flex-col items-center py-4 space-y-4">
+            <a href="#home" class="py-2">Home</a>
+            <a href="#about" class="py-2">About</a> <!-- Added About link -->
+            <a href="#services" class="py-2">Services</a>
+            <a href="#projects" class="py-2">Projects</a>
+            <a href="#contact" class="py-2">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2" data-aos="fade-right">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    Innovating <span class="gradient-text">Digital</span> Futures
+                </h1>
+                <p class="text-xl text-gray-300 mb-8">
+                    Transforming ideas into extraordinary digital experiences
+                </p>
+                <button class="bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-full transition-all">
+                    Get Started
+                </button>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0" data-aos="fade-left">
+                <img src="https://chatai.com/wp-content/uploads/2023/11/tr71123-ai-art.jpeg" alt="Hero" class="floating rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+<!-- About Us Section -->
+<section id="about" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            <!-- Image Column -->
+            <div class="lg:w-1/2 relative" data-aos="fade-right">
+                <div class="relative rounded-2xl overflow-hidden">
+                    <img src="https://typli.ai/_next/image?url=%2Fchatgpt-rewriter.png&w=1200&q=75" 
+                         alt="Our Team" 
+                         class="w-full h-[500px] object-cover rounded-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent"></div>
+                </div>
+                <div class="absolute -bottom-8 -right-8 bg-purple-600/20 p-6 rounded-2xl backdrop-blur-lg">
+                    <div class="text-4xl font-bold gradient-text">5+</div>
+                    <p class="text-gray-300">Years Experience</p>
+                </div>
+            </div>
+
+            <!-- Content Column -->
+            <div class="lg:w-1/2" data-aos="fade-left">
+                <h2 class="text-4xl font-bold mb-8">
+                    <span class="gradient-text">Innovating</span> the Digital Landscape
+                </h2>
+                <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+                    At NextGen, we're passionate about creating digital solutions that push boundaries. 
+                    Our team of experts combines technical excellence with creative vision to deliver 
+                    transformative results for businesses worldwide.
+                </p>
+                
+                <!-- Key Points -->
+                <div class="space-y-6 mb-12">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-purple-600/20 p-3 rounded-lg">
+                            <span class="text-purple-400 text-2xl">🚀</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Cutting-Edge Solutions</h3>
+                            <p class="text-gray-400">Leveraging latest technologies for maximum impact</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="bg-purple-600/20 p-3 rounded-lg">
+                            <span class="text-purple-400 text-2xl">🌟</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Award-Winning Team</h3>
+                            <p class="text-gray-400">Recognized industry leaders in digital innovation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-800 p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold gradient-text">150+</div>
+                        <p class="text-gray-400">Projects Completed</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold gradient-text">98%</div>
+                        <p class="text-gray-400">Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+   
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Our Tools</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-700 p-6  rounded-xl hover:transform hover:scale-105 transition-all" data-aos="zoom-in">
+                    <div class="text-purple-400 text-5xl mb-4">📝</div>
+                    <h3 class="text-2xl font-bold mb-4">AI PDF Summarizer</h3>
+                    <p class="text-gray-300 mb-4">Online Summarizer.</p>
+                    
+                    <a href="https://rag-application-ltzdlk4idhdyxfmxva8ybm.streamlit.app/", target="_blank"><button class="bg-gray-800 hover:bg-gray-900 px-8 py-2 rounded-2xl transition-all">
+                        Use Tools
+                    </button>
+                </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-700 p-6 rounded-xl hover:transform hover:scale-105 transition-all" data-aos="zoom-in">
+                    <div class="text-purple-400 text-4xl mb-4">🎥</div>
+                    <h3 class="text-2xl font-bold mb-4">AI Video Summarizer</h3>
+                    <p class="text-gray-300  mb-4">Cross-platform mobile applications.</p>
+                    <a href="https://uzair-devops-ai-video-summarizer-app-vkp7bo.streamlit.app/" , target="_blank"><button class="bg-gray-800 hover:bg-gray-900 px-8 py-2 rounded-2xl transition-all">
+                        Use Tools
+                    </button>
+                </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gray-700 p-6 rounded-xl hover:transform hover:scale-105 transition-all" data-aos="zoom-in">
+                    <div class="text-purple-400 text-4xl mb-4">🖼️ </div>
+                    <h3 class="text-2xl font-bold mb-4">AI Image Summarizer</h3>
+                    <p class="text-gray-300  mb-4">Online optimization.</p>
+                   <a href="https://image-summarizer-bj5jtpvhg48kjbtby4nybk.streamlit.app/" , target="_blank"><button class="bg-gray-800 hover:bg-gray-900 px-8 py-2 rounded-2xl transition-all">
+                        Use Tools
+                    </button>
+                    </a> 
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-gray-700 p-6 rounded-xl hover:transform hover:scale-105 transition-all" data-aos="zoom-in">
+                    <div class="text-purple-400 text-4xl mb-4">🎨</div>
+                    <h3 class="text-2xl font-bold mb-4">AI Text to Image</h3>
+                    <p class="text-gray-300  mb-4">Complete digital protection solutions.</p>
+                    <a href="https://image-generator-dlg9fds7mr4vqkvjvcj2pj.streamlit.app/" , target="_blank"><button class="bg-gray-800 hover:bg-gray-900 px-8 py-2 rounded-2xl transition-all">
+                        Use Tools
+                    </button>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-gray-700 p-6 rounded-xl hover:transform hover:scale-105 transition-all" data-aos="zoom-in">
+                    <div class="text-purple-400 text-4xl mb-4"> 📝 </div>
+                    <h3 class="text-2xl font-bold mb-4">AI Translator</h3>
+                    <p class="text-gray-300  mb-4">Data-driven marketing strategies.</p>
+                    <a href="https://ai-translator-hmnbrfz6woddbrkc4c7d7p.streamlit.app/" , target="_blank"><button class="bg-gray-800 hover:bg-gray-900 px-8 py-2 rounded-2xl transition-all">
+                        Use Tools
+                    </button>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-gray-700 p-6 rounded-xl hover:transform hover:scale-105 transition-all" data-aos="zoom-in">
+                    <div class="text-purple-400 text-4xl mb-4">✈️</div>
+                    <h3 class="text-2xl font-bold mb-4">AI Trip Planner</h3>
+                    <p class="text-gray-300  mb-4">Custom AI integration & development.</p>
+                    <a href="https://ai-translator-hmnbrfz6woddbrkc4c7d7p.streamlit.app/" , target="_blank"><button class="bg-gray-800 hover:bg-gray-900 px-8 py-2 rounded-2xl transition-all">
+                        Use Tools
+                    </button>
+                    </a>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="bg-gray-700 p-6 rounded-xl hover:transform hover:scale-105 transition-all" data-aos="zoom-in">
+                    <div class="text-purple-400 text-4xl mb-4">🎓</div>
+                    <h3 class="text-2xl font-bold mb-4">AI English Tutor</h3>
+                    <p class="text-gray-300  mb-4">Cloud migration & management.</p>
+                    <a href="https://al-english-tutor-y3pn9njntcubfxdnst3qbq.streamlit.app/" , target="_blank"><button class="bg-gray-800 hover:bg-gray-900 px-8 py-2 rounded-2xl transition-all">
+                        Use Tools
+                    </button>
+                    </a>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="bg-gray-700 p-6 rounded-xl hover:transform hover:scale-105 transition-all" data-aos="zoom-in">
+                    <div class="text-purple-400 text-4xl mb-4">🌐</div>
+                    <h3 class="text-2xl font-bold mb-4">AI News Teller</h3>
+                    <p class="text-gray-300  mb-4">User-centered interface design.</p>
+                    <a href="https://ai-news-telller-ogm7pnatzarkd5yyazw5kw.streamlit.app/" , target="_blank"><button class="bg-gray-800 hover:bg-gray-900 px-8 py-2 rounded-2xl transition-all">
+                        Use Tools
+                    </button>
+                    </a>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-xl hover:transform hover:scale-105 transition-all" data-aos="zoom-in">
+                    <div class="text-purple-400 text-4xl mb-4"> 📨</div>
+                    <h3 class="text-2xl font-bold mb-4">AI Email Responder</h3>
+                    <p class="text-gray-300  mb-4">User-centered interface design.</p>
+                    <a href="https://uzair-devops-email-responder-app-z26zfv.streamlit.app/" , target="_blank"><button class="bg-gray-800 hover:bg-gray-900 px-8 py-2 rounded-2xl transition-all">
+                        Use Tools
+                    </button>
+                    </a>
+                </div>
+
+
+                <div class="bg-gray-700 p-6 rounded-xl hover:transform hover:scale-105 transition-all" data-aos="zoom-in">
+                    <div class="text-purple-400 text-4xl mb-4">🏞️</div>
+                    <h3 class="text-2xl font-bold mb-4">AI Image Searcher</h3>
+                    <p class="text-gray-300  mb-4">User-centered interface design.</p>
+                    <a href="https://image-searcher-g86mebjkfujyj6828b9mb8.streamlit.app/" , target="_blank"><button class="bg-gray-800 hover:bg-gray-900 px-8 py-2 rounded-2xl transition-all">
+                        Use Tools
+                    </button>
+                    </a>
+                </div>
+
+                <div class="bg-gray-700 p-6 rounded-xl hover:transform hover:scale-105 transition-all" data-aos="zoom-in">
+                    <div class="text-purple-400 text-4xl mb-4">🤖</div>
+                    <h3 class="text-2xl font-bold mb-4">Other AI related Tools</h3>
+                    <p class="text-gray-300  mb-4">User-centered interface design.</p>
+                    <a href="https://uzair-devops-ai-tool-calling-app-app-crovcr.streamlit.app/" , target="_blank"><button class="bg-gray-800 hover:bg-gray-900 px-8 py-2 rounded-2xl transition-all">
+                        Use Tools
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="projects" class="py-20">
+    <a href="https://complete-website-no-1.vercel.app/ " , target="_blank"><div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Featured Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="relative overflow-hidden rounded-xl group" data-aos="flip-up">
+                <img src="./image.png" 
+                    alt="AI Platform" 
+                    class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-purple-600/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all p-4">
+                    <p class="text-xl font-bold mb-2">A Complete Website</p>
+                    <span class="text-sm bg-purple-800 px-2 py-1 rounded">Using Tailwind & JS</span>
+                </div>
+            </div>
+    </a>
+            <!-- Project 2 -->
+            <div class="relative overflow-hidden rounded-xl group" data-aos="flip-up">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMZ31JCchJuHanA2FnWgeLVtuCK3Wmo6uja_Y1thMuvreSnkCYRqv7x-qsrGGrXh32evc&usqp=CAU" 
+                    alt="E-commerce" 
+                    class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-purple-600/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all p-4">
+                    <p class="text-xl font-bold mb-2">Coming Soon</p>
+                    <span class="text-sm bg-purple-800 px-2 py-1 rounded">Web Development</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="relative overflow-hidden rounded-xl group" data-aos="flip-up">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiJmTmIoFY1e23zcrI_fZcQDiJJdXNr4OzzajcwLd3W7MgPcIB_WHw3i_pU9gbeRIrkWU&usqp=CAU" 
+                    alt="Mobile App" 
+                    class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-purple-600/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all p-4">
+                    <p class="text-xl font-bold mb-2">Coming Soon</p>
+                    <span class="text-sm bg-purple-800 px-2 py-1 rounded">Mobile Development</span>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="relative overflow-hidden rounded-xl group" data-aos="flip-up">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvw5YMOt0q6WtWdXa2SCzDMyJyDF70xXl2IQ&s" 
+                    alt="Cloud System" 
+                    class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-purple-600/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all p-4">
+                    <p class="text-xl font-bold mb-2">Coming Soon</p>
+                    <span class="text-sm bg-purple-800 px-2 py-1 rounded">Cloud Services</span>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="relative overflow-hidden rounded-xl group" data-aos="flip-up">
+                <img src="https://engineering.fb.com/wp-content/uploads/2016/12/grid-AI.jpg" 
+                    alt="Security" 
+                    class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-purple-600/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all p-4">
+                    <p class="text-xl font-bold mb-2">Coming Soon</p>
+                    <span class="text-sm bg-purple-800 px-2 py-1 rounded">Cyber Security</span>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="relative overflow-hidden rounded-xl group" data-aos="flip-up">
+                <img src="https://mpost.io/wp-content/uploads/image-74-7-1024x1024.jpg" 
+                    alt="Marketing" 
+                    class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-purple-600/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all p-4">
+                    <p class="text-xl font-bold mb-2">Coming Soon</p>
+                    <span class="text-sm bg-purple-800 px-2 py-1 rounded">Digital Marketing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Get in Touch</h2>
+            <form class="space-y-6">
+                <div data-aos="fade-right">
+                    <input type="text" placeholder="Name" class="w-full bg-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                </div>
+                <div data-aos="fade-left">
+                    <input type="email" placeholder="Email" class="w-full bg-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                </div>
+                <div data-aos="fade-up">
+                    <textarea rows="5" placeholder="Message" class="w-full bg-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                </div>
+                <button class="w-full bg-purple-600 hover:bg-purple-700 py-3 rounded-lg transition-all" data-aos="zoom-in">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold gradient-text mb-4">NextGen</h3>
+                    <p class="text-gray-400">Innovating digital solutions for tomorrow's challenges.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="mb-8">
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-purple-400 transition-all">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-purple-400 transition-all">Services</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-purple-400 transition-all">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-purple-400 transition-all">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="mb-8">
+                    <h4 class="text-xl font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">uzairyasin395@gmail.com</li>
+                        <li class="text-gray-400">+92 323-6891550</li>
+                        <li class="text-gray-400">UET , Lahore</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="mb-8">
+                    <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/uzair-yasin/" class="text-gray-400 hover:text-purple-400 transition-all">LinkedIn</a>
+                        <a href="https://github.com/Uzair-DeVops" class="text-gray-400 hover:text-purple-400 transition-all">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 NextGen Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form Submission
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your message! We will respond shortly.');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
